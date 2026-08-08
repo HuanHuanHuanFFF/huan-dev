@@ -1,15 +1,19 @@
 # huan-dev
 
-`huan-dev` 是一个轻量的 Codex 开发工作流 Skill。它把一次有边界的仓库改动从需求校准带到实现、验证、独立压力 Review、自动返工与证据化交付，同时尽量避免为简单任务引入沉重流程。
+`huan-dev` 是一组面向 Codex 的仓库开发 Skills。它既提供从需求校准到证据化交付的完整工作流，也保留各阶段和通用能力的独立入口。
 
-## 工作方式
+## Skills
 
-- 先调查仓库事实、已有实现及职责归属，再决定是否需要追问。
-- 只有会改变结果、范围、所有权、验收或权限的未决事项才进入需求确认。
-- 对非简单改动，在初次实现和验证后安排至少一个独立 Reviewer。
-- 对已确认需求范围内的有效问题自动返工、复验，并重新 Review 受影响部分。
-- 新需求、架构选择、权限扩张或与用户决定冲突的事项仍交给用户决定。
-- 真实环境无法由 Agent 完成时，明确保留证据缺口和人工签收项。
+| Skill | 用途 | 调用方式 |
+|---|---|---|
+| `$huan-dev` | 完整执行需求校准、实现、验证、压力测试、返工与交付 | 仅显式指定 |
+| `$requirement-calibration` | 基于仓库事实收敛需求边界和用户决策 | 仅显式指定 |
+| `$pressure-review` | 独立压力测试改动并闭环有效发现 | 仅显式指定 |
+| `$delivery-brief` | 生成信息密度适当、可直接验收的交付简报 | 仅显式指定 |
+| `$execute-from-goal` | 从自然语言目标完成仓库任务 | 保持原 Skill 配置 |
+| `$prompt-entropy` | 编写、审查或压缩通用 Prompt 与 Skill 指令 | 保持原 Skill 配置 |
+
+完整工作流按任务风险选择分支：只有影响结果、范围、职责、验收或权限的未决事项才进入需求校准；只有非简单改动才执行独立压力测试；只有复杂交付或存在验收影响时才额外加载 `delivery-brief`。
 
 ## 目录
 
@@ -18,45 +22,51 @@ huan-dev/
 ├── README.md
 ├── LICENSE
 └── skills/
-    └── huan-dev/
-        ├── SKILL.md
-        ├── agents/
-        │   └── openai.yaml
-        └── references/
-            ├── grilling.md
-            └── review.md
+    ├── huan-dev/
+    ├── requirement-calibration/
+    ├── pressure-review/
+    ├── delivery-brief/
+    ├── execute-from-goal/
+    └── prompt-entropy/
 ```
+
+每个目录都是可独立发现和显示的 Skill，包含自己的 `SKILL.md` 与 `agents/openai.yaml`。
 
 ## 安装
 
-克隆仓库，然后把纯 Skill 目录复制到 Codex Skills 目录：
-
 ```powershell
 git clone https://github.com/HuanHuanHuanFFF/huan-dev.git
-$target = "$env:USERPROFILE\.codex\skills\huan-dev"
+Set-Location .\huan-dev
+
+$target = if ($env:CODEX_HOME) {
+    Join-Path $env:CODEX_HOME "skills"
+} else {
+    Join-Path $env:USERPROFILE ".codex\skills"
+}
+
 New-Item -ItemType Directory -Force -Path $target | Out-Null
-Copy-Item -Recurse -Force ".\huan-dev\skills\huan-dev\*" $target
+Copy-Item -Recurse -Force ".\skills\*" $target
 ```
 
-如果使用自定义的 `CODEX_HOME`：
-
-```powershell
-$target = "$env:CODEX_HOME\skills\huan-dev"
-New-Item -ItemType Directory -Force -Path $target | Out-Null
-Copy-Item -Recurse -Force ".\huan-dev\skills\huan-dev\*" $target
-```
-
-安装后重新启动 Codex，使 Skill 被重新发现。
+复制会更新目标目录中同名 Skill。安装后重新启动 Codex，使整组 Skills 被重新发现。
 
 ## 使用
+
+完整工作流：
 
 ```text
 $huan-dev
 
-完成这次仓库改动：<描述目标、范围和不希望进入的后续工作>。
+完成这次仓库改动：<目标、边界和验收要求>。
 ```
 
-任务较重时，`huan-dev` 会主动确认是否增加多个独立 Reviewer 进行交叉验证。清晰、局部且低风险的改动可以直接执行，不强制额外问答。
+也可以显式选择某个阶段：
+
+```text
+$requirement-calibration 校准这次改动的需求和边界。
+$pressure-review 对当前改动执行独立压力测试。
+$delivery-brief 把当前结果整理成可验收的交付简报。
+```
 
 ## 许可
 

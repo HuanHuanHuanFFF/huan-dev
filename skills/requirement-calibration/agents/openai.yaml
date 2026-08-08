@@ -1,0 +1,7 @@
+interface:
+  display_name: "需求校准"
+  short_description: "基于仓库事实收敛改动范围、职责归属、验收标准与用户决策"
+  default_prompt: "使用 $requirement-calibration 在实现前校准这次仓库改动的需求与边界。"
+
+policy:
+  allow_implicit_invocation: false

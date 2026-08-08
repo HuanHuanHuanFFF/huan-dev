@@ -1,21 +1,20 @@
 ---
 name: huan-dev
-description: Complete a scoped repository change with lightweight requirement alignment, proportional verification, and independent pressure review for non-simple changes. Use when carrying a development request through implementation, ordinary rework, and an evidence-bounded handoff.
+description: Orchestrate a scoped repository change through requirement calibration, goal-driven implementation, proportional verification, independent pressure review, ordinary rework, and an evidence-bounded handoff. Use when the user explicitly requests the complete Huan Dev workflow.
 ---
 
 # Huan Dev
 
-Deliver one scoped repository change: implement the confirmed intent, verify it proportionately, pressure-review non-simple work, fix ordinary findings, and report only what the evidence supports.
+Carry one authorized repository change from goal to acceptance. This skill owns orchestration; the linked skills own their stages.
 
 ## Flow
 
-1. **Ground.** Treat the user's request as the task. Inspect repository instructions, live state, relevant code, tests, plans, and history far enough to locate existing behavior and its owner. Preserve unrelated user changes.
-2. **Clarify when material.** Read [grilling.md](references/grilling.md) when an unresolved user decision could change the outcome, scope, ownership, acceptance, or authority. Also read it for a heavy task so the user can choose whether to add cross-validating reviewers. Let a clear local change proceed without ceremony.
-3. **Implement and check.** Follow repository patterns and choose the smallest effective feedback loop. Implement within the confirmed boundary, then run fresh checks proportionate to the claim being made. A reversible candidate inside the authorized outcome may be implemented provisionally and sent to review; ask first when it expands authority, external effects, or irreversible scope.
-4. **Pressure-review non-simple work.** A change is simple only when it is local, reversible, introduces no state or public contract, crosses no behavioral boundary, and leaves no material decision open. Otherwise read [review.md](references/review.md) and dispatch at least one independent reviewer after the initial implementation and checks.
-5. **Resolve findings.** Verify reviewer claims against repository reality. Fix findings that fall within the confirmed intent, rerun affected checks, and re-review the affected scope. Keep new requirements, architecture choices, and conflicts with prior user decisions visible for the user to decide.
-6. **Hand off.** Give the shortest decision brief that lets the user accept, request rework, or run a remaining real-environment check. Reconcile the delivered behavior against the confirmed pre-implementation requirements, report material review findings and their resolution, bound the result with fresh evidence, and surface only remaining user-owned decisions or actions. Group satisfied requirements and routine fixes; expand deviations, unresolved risks, and facts that could change acceptance. Treat commit, push, and PR actions according to the current request.
+1. **Ground.** Treat the user's request as the task. Inspect repository instructions, live state, relevant code, tests, plans, and history far enough to locate current behavior and its owner. Preserve unrelated user changes.
+2. **Calibrate.** When a user-owned decision could change the outcome, scope, ownership, acceptance, or authority—or heavy work needs a review-intensity decision—read [Requirement Calibration](../requirement-calibration/SKILL.md). Continue when the current acceptance brief is settled.
+3. **Execute.** Read [Execute from Goal](../execute-from-goal/SKILL.md) and use it as the implementation layer through fresh verification. The confirmed brief and this workflow are more specific; continue through review and handoff before finishing.
+4. **Pressure-review.** A change is simple only when it is local, reversible, introduces no state or public contract, crosses no ownership or behavioral boundary, involves no concurrency or retry behavior, and leaves no material decision open. Otherwise read [Pressure Review](../pressure-review/SKILL.md) and complete its review-resolution loop.
+5. **Hand off.** Read [Delivery Brief](../delivery-brief/SKILL.md) when the task was pressure-reviewed or any scope, requirement, architecture, rework, uncertainty, or evidence gap could change acceptance. For a simple aligned change, report only the outcome and fresh checks. Treat commit, push, and PR actions according to the current request.
 
 ## Completion
 
-Finish when the confirmed change is implemented; every non-simple change has completed its required pressure review; substantiated findings within the agent's authority are resolved; and each completion claim is bounded by fresh evidence or an explicit gap.
+Finish when the confirmed change is implemented; required pressure review is resolved within the agent's authority; remaining user-owned decisions and evidence gaps are explicit; and the handoff supports an acceptance decision.
