@@ -1,13 +1,17 @@
 ---
 name: prompt-entropy
-description: Create, rewrite, or compress prompts for another AI agent, coding agent, or delegated subthread. Use for delegation, prompt refinement, or context reduction while preserving constraints, authority, and verification. Exclude requests to complete only the underlying task.
+description: Write, rewrite, review, or compress prompts for direct model use, reusable templates, delegated tasks, or prompt-bearing parts of skills and agent workflows. Use when wording must preserve intent, constraints, authority, context access, and verification while improving clarity or information density. Exclude requests to execute only the underlying task.
 ---
 
 # Prompt Entropy
 
-Draft the handoff prompt first. Do not perform or delegate the underlying task unless the user also requests execution.
+Treat the prompt or prompt-bearing text as the primary artifact. Do not substitute execution of the underlying task for writing it unless the user requests both.
 
 Maximize actionable information per token. Brevity is a budget, not the goal: each retained phrase should change a decision, search path, authority, output, or verification.
+
+## Match the prompt surface
+
+Treat standalone prompts, delegated handoffs, reusable templates, skill instructions, default prompts, and workflow steps as different prompt surfaces. Preserve each host artifact's packaging and invocation mechanics; optimize the language that controls model behavior.
 
 ## Preserve meaning first
 
@@ -26,7 +30,7 @@ Treat repeated corrective rules as evidence, not clutter. Merge equivalent wordi
 
 ## Model the recipient
 
-Identify the recipient's access. Assume fresh context unless sharing is explicit.
+Identify the target model and the context it will actually receive. Assume fresh context unless shared state is explicit.
 
 - Use pointers only when the recipient can access the same environment and will load the named material.
 - For a remote agent, web model, isolated subthread, or different workspace, include the minimum payload that preserves invariants.
@@ -36,11 +40,11 @@ Prefer precise pointers for shared access and minimal self-contained payloads ot
 
 ## Workflow
 
-1. Recover the recipient, outcome, artifact, authority, invariants, accessible context, and verification.
+1. Recover the target model, prompt surface, outcome, artifact, authority, invariants, accessible context, and verification.
 2. Separate facts from hypotheses and user decisions from agent discretion.
 3. Ask only questions that would change the deliverable, authority, or acceptance criteria.
 4. Keep details that reduce consequential uncertainty; cut those that merely sound thorough.
-5. Compose the shortest prompt that preserves the ledger and enough accessible context to act.
+5. Compose the shortest prompt or instruction that preserves the ledger and enough accessible context to act.
 6. Run the loss, access, and completion tests before returning it.
 
 ## Compress without over-specifying
@@ -48,6 +52,8 @@ Prefer precise pointers for shared access and minimal self-contained payloads ot
 Lead with the outcome. Add context, output shape, boundaries, and process only when they change the result or risk.
 
 Use direct verbs, concrete nouns, exact anchors, and checkable predicates. Let the recipient choose; specify a solution only when decided or required for compatibility.
+
+Improve articulation, not ambition. Do not add goals, risk domains, deliverables, or authority that the source prompt does not support.
 
 Consolidate duplicate meaning, but first decide whether repetition carries emphasis, a separate branch, or a failure-derived safeguard.
 
@@ -83,6 +89,6 @@ A lower token count proves only that the prompt is shorter. Do not claim better 
 
 ## Output
 
-Return one copy-ready prompt in a fenced code block. Prefer a compact paragraph; use bullets when independent constraints would otherwise blur together.
+Return the prompt in the form where it will be used. For a standalone prompt, return one copy-ready prompt in a fenced code block. For a skill, template, or agent document, edit or return the prompt-bearing text in its native structure. Prefer a compact paragraph; use bullets when independent constraints would otherwise blur together.
 
 If execution was also requested, separate the drafted prompt from subsequent execution. Add explanation only when requested or when one brief note prevents likely misuse.

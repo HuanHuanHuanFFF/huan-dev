@@ -11,7 +11,7 @@
 | `$pressure-review` | 独立压力测试改动并闭环有效发现 | 仅显式指定 |
 | `$delivery-brief` | 生成信息密度适当、可直接验收的交付简报 | 仅显式指定 |
 | `$execute-from-goal` | 从自然语言目标完成仓库任务 | 保持原 Skill 配置 |
-| `$prompt-entropy` | 编写或压缩 Agent 委派提示词 | 保持原 Skill 配置 |
+| `$prompt-entropy` | 编写、审查或压缩通用 Prompt 与 Skill 指令 | 保持原 Skill 配置 |
 
 完整工作流按任务风险选择分支：只有影响结果、范围、职责、验收或权限的未决事项才进入需求校准；只有非简单改动才执行独立压力测试；只有复杂交付或存在验收影响时才额外加载 `delivery-brief`。
 

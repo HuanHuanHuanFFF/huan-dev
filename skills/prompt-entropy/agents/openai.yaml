@@ -1,6 +1,6 @@
 interface:
   display_name: "Prompt Entropy"
-  short_description: "Compress tasks into dense agent prompts"
-  default_prompt: "Use $prompt-entropy to turn this task into a compact, high-information prompt for another agent."
+  short_description: "Write dense, reliable prompts for agents and skills"
+  default_prompt: "Use $prompt-entropy to write or refine this prompt while preserving intent, constraints, and verification."
 policy:
   allow_implicit_invocation: true
