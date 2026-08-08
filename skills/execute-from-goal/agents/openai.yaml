@@ -1,0 +1,6 @@
+interface:
+  display_name: "Execute from Goal"
+  short_description: "Execute coding tasks with compact feedback loops"
+  default_prompt: "Use $execute-from-goal to carry out this coding task from my goal and boundaries."
+policy:
+  allow_implicit_invocation: true
