@@ -1,6 +1,7 @@
 ---
 name: prompt-entropy
 description: Write, rewrite, review, or compress prompts for direct model use, reusable templates, delegated tasks, or prompt-bearing parts of skills and agent workflows. Use when wording must preserve intent, constraints, authority, context access, and verification while improving clarity or information density. Exclude requests to execute only the underlying task.
+license: MIT
 ---
 
 # Prompt Entropy

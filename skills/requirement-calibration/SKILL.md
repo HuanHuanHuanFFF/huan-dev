@@ -1,6 +1,7 @@
 ---
 name: requirement-calibration
 description: Calibrate a repository change before implementation by separating discoverable facts from user-owned decisions and settling scope, ownership, acceptance, and review intensity.
+license: MIT
 ---
 
 # Requirement Calibration

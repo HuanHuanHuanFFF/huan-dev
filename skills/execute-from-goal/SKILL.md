@@ -1,6 +1,7 @@
 ---
 name: execute-from-goal
 description: Execute non-trivial coding or repository work from a natural-language goal when the current agent must discover an implementation path and carry it through proportionate verification. Use for direct development work; prefer a more specific workflow skill when one clearly fits. Exclude prompt-writing and simple Q&A.
+license: MIT
 ---
 
 # Execute from Goal

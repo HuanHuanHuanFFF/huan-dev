@@ -1,6 +1,7 @@
 ---
 name: huan-dev
 description: Orchestrate a scoped repository change through requirement calibration, goal-driven implementation, proportional verification, independent pressure review, ordinary rework, and an evidence-bounded handoff. Use when the user explicitly requests the complete Huan Dev workflow.
+license: MIT
 ---
 
 # Huan Dev

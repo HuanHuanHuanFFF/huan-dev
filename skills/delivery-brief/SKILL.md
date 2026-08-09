@@ -1,6 +1,7 @@
 ---
 name: delivery-brief
 description: Produce a decision-ready brief after a repository change by reconciling actual scope, material requirement or architecture drift, review-driven rework, verification evidence, and acceptance gaps.
+license: MIT
 ---
 
 # Delivery Brief
