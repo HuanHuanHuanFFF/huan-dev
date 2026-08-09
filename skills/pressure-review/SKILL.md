@@ -1,6 +1,7 @@
 ---
 name: pressure-review
 description: Independently pressure-test an implemented repository change, resolve substantiated in-scope findings, and expose remaining decisions or evidence gaps before acceptance.
+license: MIT
 ---
 
 # Pressure Review
