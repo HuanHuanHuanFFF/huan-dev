@@ -2,6 +2,8 @@
 
 `huan-dev` 是一组面向 Codex 的仓库开发 Skills。它既提供从需求校准到证据化交付的完整工作流，也保留各阶段和通用能力的独立入口。
 
+[GitHub Release](https://github.com/HuanHuanHuanFFF/huan-dev/releases/latest) · [OpenAI 插件提交材料](docs/openai-plugin-submission.md)
+
 ## Skills
 
 | Skill | 用途 | 调用方式 |
@@ -19,8 +21,12 @@
 
 ```text
 huan-dev/
+├── .codex-plugin/plugin.json
 ├── README.md
 ├── LICENSE
+├── PRIVACY.md
+├── TERMS.md
+├── docs/
 └── skills/
     ├── huan-dev/
     ├── requirement-calibration/
@@ -33,6 +39,14 @@ huan-dev/
 每个目录都是可独立发现和显示的 Skill，包含自己的 `SKILL.md` 与 `agents/openai.yaml`。
 
 ## 安装
+
+通过 GitHub Agent Skills 安装：
+
+```powershell
+gh skill install HuanHuanHuanFFF/huan-dev
+```
+
+也可以手动安装：
 
 ```powershell
 git clone https://github.com/HuanHuanHuanFFF/huan-dev.git
@@ -49,6 +63,8 @@ Copy-Item -Recurse -Force ".\skills\*" $target
 ```
 
 复制会更新目标目录中同名 Skill。安装后重新启动 Codex，使整组 Skills 被重新发现。
+
+仓库同时包含 OpenAI skills-only 插件清单；进入公共 Plugins Directory 仍需完成 OpenAI Platform 审核。
 
 ## 使用
 

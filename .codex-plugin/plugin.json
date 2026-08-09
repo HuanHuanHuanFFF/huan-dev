@@ -1,0 +1,39 @@
+{
+  "name": "huan-dev",
+  "version": "1.0.0",
+  "description": "Repository development workflows from requirement calibration through verified delivery.",
+  "author": {
+    "name": "HuanHuanHuanFFF",
+    "url": "https://github.com/HuanHuanHuanFFF"
+  },
+  "homepage": "https://github.com/HuanHuanHuanFFF/huan-dev",
+  "repository": "https://github.com/HuanHuanHuanFFF/huan-dev",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "codex",
+    "software-development",
+    "code-review",
+    "prompt-engineering"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Huan Dev",
+    "shortDescription": "Calibrate, implement, pressure-review, and deliver repository changes.",
+    "longDescription": "Carry repository changes from requirement calibration through implementation, verification, independent pressure review, rework, and an acceptance-focused handoff. Each stage and the prompt-writing layer can also be used independently.",
+    "developerName": "HuanHuanHuanFFF",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/HuanHuanHuanFFF/huan-dev",
+    "privacyPolicyURL": "https://github.com/HuanHuanHuanFFF/huan-dev/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/HuanHuanHuanFFF/huan-dev/blob/main/TERMS.md",
+    "defaultPrompt": [
+      "Carry this repository change from requirement calibration through verified delivery.",
+      "Pressure-review this implemented change and resolve substantiated in-scope findings.",
+      "Rewrite this prompt for clarity and information density without changing its intent."
+    ]
+  }
+}
