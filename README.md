@@ -12,8 +12,8 @@
 | `$requirement-calibration` | 基于仓库事实收敛需求边界和用户决策 | 仅显式指定 |
 | `$pressure-review` | 独立压力测试改动并闭环有效发现 | 仅显式指定 |
 | `$delivery-brief` | 生成信息密度适当、可直接验收的交付简报 | 仅显式指定 |
-| `$execute-from-goal` | 从自然语言目标完成仓库任务 | 保持原 Skill 配置 |
-| `$prompt-entropy` | 编写、审查或压缩通用 Prompt 与 Skill 指令 | 保持原 Skill 配置 |
+| `$execute-from-goal` | 从自然语言目标完成仓库任务 | 自动匹配 |
+| `$prompt-entropy` | 编写、审查或压缩通用 Prompt 与 Skill 指令 | 自动匹配 |
 
 完整工作流按任务风险选择分支：只有影响结果、范围、职责、验收或权限的未决事项才进入需求校准；只有非简单改动才执行独立压力测试；只有复杂交付或存在验收影响时才额外加载 `delivery-brief`。
 
@@ -40,7 +40,13 @@ huan-dev/
 
 ## 安装
 
-通过 skills.sh 安装整组或选择其中的 Skill：
+一键将本仓库中的全部 Skills 全局安装到 Codex，无需交互选择：
+
+```powershell
+npx --yes skills add HuanHuanHuanFFF/huan-dev --skill '*' --agent codex --global --yes
+```
+
+如需选择具体 Skill、安装范围或目标 Agent，可使用交互式安装：
 
 ```powershell
 npx skills add HuanHuanHuanFFF/huan-dev
