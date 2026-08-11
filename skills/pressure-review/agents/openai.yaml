@@ -1,5 +1,5 @@
 interface:
-  display_name: "压力测试"
+  display_name: "Pressure Review"
   short_description: "以独立只读 Review 发现验收阻断并闭环返工、复验与分歧"
   default_prompt: "使用 $pressure-review 对这次仓库改动执行独立压力测试并闭环有效发现。"
 
