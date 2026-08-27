@@ -1,7 +1,7 @@
 interface:
   display_name: "Pressure Review"
-  short_description: "Independently find acceptance blockers and close the loop through rework, re-verification, and dispute handling"
-  default_prompt: "Use $pressure-review to pressure-test this repository change independently and resolve substantiated findings."
+  short_description: "以独立只读 Review 发现验收阻断并闭环返工、复验与分歧"
+  default_prompt: "使用 $pressure-review 对这次仓库改动执行独立压力测试并闭环有效发现。"
 
 policy:
   allow_implicit_invocation: false
