@@ -1,6 +1,6 @@
 interface:
   display_name: "Delivery Brief"
-  short_description: "Present scope, requirement deviations, review rework, and verification evidence with minimal reading cost"
+  short_description: "Summarize scope, review outcomes, and verification evidence"
   default_prompt: "Use $delivery-brief to turn this repository change into a concise, acceptance-ready delivery brief."
 
 policy:
