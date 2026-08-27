@@ -1,6 +1,6 @@
 interface:
   display_name: "Huan Dev"
-  short_description: "Complete development workflow from requirement calibration and verified implementation to independent pressure review and evidence-bounded delivery"
+  short_description: "Run a calibrated, reviewed, and verified development workflow"
   default_prompt: "Use $huan-dev to complete the full workflow for this repository change."
 
 policy:
