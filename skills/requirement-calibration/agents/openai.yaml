@@ -1,6 +1,6 @@
 interface:
   display_name: "Requirement Calibration"
-  short_description: "Calibrate scope, ownership, and acceptance before coding"
+  short_description: "Settle repo-based scope, ownership, acceptance, and user choices"
   default_prompt: "Use $requirement-calibration to calibrate this repository change's requirements and boundaries before implementation."
 
 policy:
