@@ -1,6 +1,6 @@
 interface:
   display_name: "Pressure Review"
-  short_description: "Independently find acceptance blockers and close the loop through rework, re-verification, and dispute handling"
+  short_description: "Pressure-test changes and resolve substantiated findings"
   default_prompt: "Use $pressure-review to pressure-test this repository change independently and resolve substantiated findings."
 
 policy:
