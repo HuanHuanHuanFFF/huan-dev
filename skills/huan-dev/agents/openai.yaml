@@ -1,7 +1,7 @@
 interface:
   display_name: "Huan Dev"
-  short_description: "从需求校准、实现验证到独立压力测试和证据化交付的完整开发工作流"
-  default_prompt: "使用 $huan-dev 完成这次仓库改动的完整工作流。"
+  short_description: "Complete development workflow from requirement calibration and verified implementation to independent pressure review and evidence-bounded delivery"
+  default_prompt: "Use $huan-dev to complete the full workflow for this repository change."
 
 policy:
   allow_implicit_invocation: false
