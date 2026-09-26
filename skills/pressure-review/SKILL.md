@@ -6,11 +6,13 @@ license: MIT
 
 # Pressure Review
 
-Try to falsify acceptance with fresh, read-only reviewers. Review the work product and evidence, not the implementer's reasoning history.
+Try to falsify acceptance with independent, read-only subagents. Start them in fresh contexts without inheriting the implementation conversation; review the work product and evidence.
 
 ## Dispatch
 
-Use one independent reviewer for an ordinary non-simple change. For heavy work, use the reviewer count confirmed during requirement calibration; if none was confirmed, recommend a count and ask before incurring extra reviewer cost. Run multiple reviewers in parallel where possible. Give every reviewer the same core acceptance question; different emphases may guide attention, but no reviewer owns an exclusive slice of correctness.
+Dispatch two reviewers in parallel by default, without asking for reviewer-count confirmation. Apply explicit user overrides to the count or execution constraints; heavy work alone does not change the default.
+
+Give every reviewer the same core acceptance question and responsibility for the whole change, including ordinary behavior and obvious defects. Keep at least one reviewer without an assigned focus, free to choose its own angles of attack. Other reviewers may receive a risk emphasis; overlapping coverage is welcome.
 
 Read [Prompt Entropy](../prompt-entropy/SKILL.md) once before drafting the reviewer handoffs, then dispatch them. Preserve the confirmed outcome and boundary, repository or diff anchors, relevant corrective protections, fresh checks, read-only authority, and the requested deliverable: acceptance-changing findings with evidence and impact. Give reviewers raw artifacts; omit the intended verdict, suspected findings, and implementation reasoning.
 

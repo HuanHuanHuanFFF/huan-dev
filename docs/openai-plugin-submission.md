@@ -32,7 +32,7 @@ Copy-ready material for the initial public, skills-only submission of Huan Dev. 
 ### 2. Requirement calibration
 
 - **Prompt:** `Use requirement calibration before changing where this application stores session state.`
-- **Expected behavior:** Inspect current ownership and architecture, resolve discoverable facts, then ask only user-owned decisions that materially change ownership, compatibility, acceptance, or review cost.
+- **Expected behavior:** Inspect current ownership and architecture, resolve discoverable facts, then ask only user-owned decisions that materially change ownership, compatibility, or acceptance.
 - **Expected result:** A compact acceptance brief; no implementation before the material decision is settled.
 - **Fixture:** A repository with two plausible state owners documented or visible in code. No account is required.
 
@@ -46,7 +46,7 @@ Copy-ready material for the initial public, skills-only submission of Huan Dev. 
 ### 4. Pressure review
 
 - **Prompt:** `Pressure-review the current retry implementation and resolve substantiated in-scope findings.`
-- **Expected behavior:** Dispatch a fresh read-only review with neutral evidence, verify each finding against the repository, fix confirmed defects within scope, rerun affected checks, and re-review the affected area.
+- **Expected behavior:** Dispatch two independent read-only reviewers in parallel without count confirmation, each with fresh context and neutral evidence; at least one chooses its own review angles without an assigned focus. Verify each finding against the repository, fix confirmed defects within scope, rerun affected checks, and re-review the affected area.
 - **Expected result:** Resolved findings with evidence; material new requirements or architecture choices remain explicit user decisions.
 - **Fixture:** A repository diff with a reproducible duplicate-side-effect bug in retry handling and a runnable regression test. No account is required.
 
