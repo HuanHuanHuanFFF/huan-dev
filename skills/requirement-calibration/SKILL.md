@@ -1,6 +1,6 @@
 ---
 name: requirement-calibration
-description: Calibrate a repository change before implementation by separating discoverable facts from user-owned decisions and settling scope, ownership, acceptance, and review intensity.
+description: Calibrate a repository change before implementation by separating discoverable facts from user-owned decisions and settling scope, ownership, and acceptance.
 license: MIT
 ---
 
@@ -18,12 +18,6 @@ Map material decisions and their dependencies. Ask only the current frontier: de
 
 Recompute the frontier after each answer. Keep only decisions that can change the deliverable, scope, authority, ownership, or acceptance; leave hypothetical future branches out.
 
-## Calibrate review intensity
-
-Treat work as heavy when it crosses modules or protocols, changes state ownership or a public contract, involves concurrency or retry behavior, makes a consequential architecture choice, or seeks real-capability signoff.
-
-For heavy work, recommend whether one pressure reviewer is enough or multiple independent reviewers should cross-validate. Name the risk and proposed count, then let the user choose the extra review cost. Ordinary non-simple work already receives one reviewer.
-
 ## Completion
 
-Finish when every material decision for the current deliverable is explicitly answered or covered by a clearly scoped acceptance of recommendations. Keep a compact acceptance brief in the conversation unless a durable artifact was requested: outcome, boundary, owner or architecture constraint, acceptance evidence, and reviewer count when applicable.
+Finish when every material decision for the current deliverable is explicitly answered or covered by a clearly scoped acceptance of recommendations. Keep a compact acceptance brief in the conversation unless a durable artifact was requested: outcome, boundary, owner or architecture constraint, acceptance evidence, and any explicit review constraints.
