@@ -1,0 +1,6 @@
+interface:
+  display_name: "Estimate Task Time"
+  short_description: "Estimate agent task hours with a one-minute AA lookup"
+  default_prompt: "Use $estimate-task-time to scope this task, check same-model AA runtime for at most one minute, and estimate the hours needed to complete it."
+policy:
+  allow_implicit_invocation: true
